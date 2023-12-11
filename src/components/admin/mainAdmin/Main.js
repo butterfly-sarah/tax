@@ -17,16 +17,16 @@ function Main(){
             <div className="mx-auto side">
             <h3 className="py-5 mb-5 ps-3">Dashboard</h3>
             <div className="py-3 ps-3 dashitems">
-                <Link className="header" to={'/admin/users'}>users</Link>
-                <Link to={'/admin/users'}>all users</Link>
-                <Link to={'/admin/adduser'}>add new</Link>
-                <Link className="header" to={'/admin/blogs'}>blogs</Link>
-                <Link to={'/admin/blogs'}>all blogs</Link>
-                <Link to={'/admin/addblog'}>add new</Link>
-                <Link className="header" to={'/admin/services'}>services</Link>
+                <Link className="header" to={'/users'}>users</Link>
+                <Link to={'/users'}>all users</Link>
+                <Link to={'/adduser'}>add new</Link>
+                <Link className="header" to={'/blogs'}>blogs</Link>
+                <Link to={'/blogs'}>all blogs</Link>
+                <Link to={'/addblog'}>add new</Link>
+                <Link className="header" to={'/services'}>services</Link>
                 <Link>unread</Link>
                 <Link>ongoing</Link>
-                <Link to={'/admin/services'}>all services</Link>
+                <Link to={'/services'}>all services</Link>
                 <Link className="header">analytics</Link>
                 <Link className="header">settings</Link>
             </div>

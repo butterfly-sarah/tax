@@ -17,12 +17,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
-       <Route path='/admin' element={<Main/>}>
-        <Route path='/admin/blogs' element={<Blogs/>}/>
-        <Route path='/admin/addblog' element={<Addblog/>}/>
-        <Route path='/admin/services' element={<Services/>}/>
-        <Route path='/admin/users' element={<Users/>}/>
-        <Route path='/admin/adduser' element={<Adduser/>}/>
+       <Route path='/' element={<Main/>}>
+        <Route path='/blogs' element={<Blogs/>}/>
+        <Route path='/addblog' element={<Addblog/>}/>
+        <Route path='/services' element={<Services/>}/>
+        <Route path='/users' element={<Users/>}/>
+        <Route path='/adduser' element={<Adduser/>}/>
         </Route>
        <Route path='/user' element={<Mainuser/>}>
         <Route path='/user/services' element={<Allservices/>}/>
