@@ -1,4 +1,6 @@
-
+import React from 'react';
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import 'font-awesome/css/font-awesome.min.css';
 function Allservices(){
     return(
@@ -6,86 +8,58 @@ function Allservices(){
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css"></link>
             <div className="row p-0 m-0 p-4">
                 <h3 className="col-6 m-0">All services</h3>
-                <div className="col-6 d-flex justify-content-between p-0 m-0">
+                <div className="col-sm-12 col-md-6 d-flex justify-content-between p-0 m-0">
                     <input placeholder="&#xf0dc; Sort by" className='col-4' style={{"font-family":"FontAwesome"}}></input>
                     <input placeholder="&#xf002; Search list.." className='col-7' style={{"font-family":"FontAwesome"}}></input>
                 </div>
             </div>
             <div className=''>
-                <table border="1" frame="void" rules="rows">
-                    <tr className='thead'>
-                        <th>#</th>
-                        <th>service</th>
-                        <th>Serial-code</th>
-                        <th>last update</th>
-                        <th>date</th>
-                        <th>Actions</th>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>lorem ipsum</td>
-                        <td>#123-456ABC</td>
-                        <td>12-12-2024</td>
-                        <td>12-12-2024</td>
-                        <td className='green'>Completed</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>lorem ipsum</td>
-                        <td>#123-456ABC</td>
-                        <td>12-12-2024</td>
-                        <td>12-12-2024</td>
-                        <td>details</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>lorem ipsum</td>
-                        <td>#123-456ABC</td>
-                        <td>12-12-2024</td>
-                        <td>12-12-2024</td>
-                        <td className='green'>Completed</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>lorem ipsum</td>
-                        <td>#123-456ABC</td>
-                        <td>12-12-2024</td>
-                        <td>12-12-2024</td>
-                        <td>details</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
+                <Table border="1" frame="void" rules="rows">
+                    <Thead>
+                    <Tr className='thead'>
+                        <Th>#</Th>
+                        <Th>service</Th>
+                        <Th>Serial-code</Th>
+                        <Th>last update</Th>
+                        <Th>date</Th>
+                        <Th>Actions</Th>
+                    </Tr>
+                    </Thead>
+                    <Tbody>
+                    <Tr>
+                        <Td>03</Td>
+                        <Td>lorem ipsum</Td>
+                        <Td>#123-456ABC</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>12-12-2024</Td>
+                        <Td className='green'>Completed</Td>
+                    </Tr>
+                    <Tr>
+                        <Td>03</Td>
+                        <Td>lorem ipsum</Td>
+                        <Td>#123-456ABC</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>details</Td>
+                    </Tr>
+                    <Tr>
+                        <Td>03</Td>
+                        <Td>lorem ipsum</Td>
+                        <Td>#123-456ABC</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>12-12-2024</Td>
+                        <Td className='green'>Completed</Td>
+                    </Tr>
+                    <Tr>
+                        <Td>03</Td>
+                        <Td>lorem ipsum</Td>
+                        <Td>#123-456ABC</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>details</Td>
+                    </Tr>
+                    </Tbody>
+                </Table>
             </div>
         </div>
     )

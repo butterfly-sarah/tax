@@ -12,21 +12,21 @@ function Addblog(){
     <form>
     <div className='blog-form p-4 my-5 mx-auto  '>
         <div className='row'>
-        <div className='col-6'>
+        <div className='col-sm-12 col-md-6'>
         <p>title</p>
         <input type='email' className='w-100' placeholder='your blog title'></input>
         </div>
-        <div className='col-6'>
+        <div className='col-sm-12 col-md-6'>
         <p>tags</p>
         <input type='text' className='w-100' placeholder='enter tags'></input>
         </div>
-        <div className='col-6'>
+        <div className='col-sm-12 col-md-6'>
         <p >upload photo</p>
         <div className='upload'>
             <img src={upload} className='d-block mx-auto'></img>
         </div>
         </div>
-        <div className='col-6'>
+        <div className='col-sm-12 col-md-6'>
         <p >categories</p>
         <input type='text' className='w-100'  placeholder='your blog categories'></input>
         </div>

@@ -2,11 +2,25 @@ import { Link, Outlet } from "react-router-dom";
 import Footer from "../../footer/Footer";
 import Nav from "../../nav/Nav";
 import './mainuser.css'
-import Allservices from "../allservices/Allservices";
-import Perpapers from "../perpapers/Perpapers";
-import Compapers from "../compapers/Compapers";
+import { useState } from "react";
 
 function Mainuser(){
+const [paperDropdown ,setpaperDropdown] = useState(true)
+const [serviceDropdown ,setserviceDropdown] = useState(false)
+const handleShowDropdown = (drop)=>{
+    switch (drop) {
+      case 'paper':
+          setpaperDropdown(true)
+          setserviceDropdown(false)
+        break;
+      case 'service':
+          setpaperDropdown(false)
+          setserviceDropdown(true)
+        break;
+        default:
+            break;
+    }
+}
     return(
         <>
         <Nav/>
@@ -28,8 +42,40 @@ function Mainuser(){
                 <Link className="mx-auto">Logout</Link>
             </div>
             </div>
+            <div className="dropside">
+            <div className="links d-flex justify-content-around mt-3">
+                <Link className="header" to={'/user/perpapers'} onClick={()=>handleShowDropdown("paper")}>papers</Link>
+                <Link className="header" to={'/user/services'} onClick={()=>handleShowDropdown("service")}>services</Link>
+                <Link className="header">settings</Link>
+            </div>
+            <div className="mt-4 row">
+                {
+              paperDropdown ?( <div className="dropdown">
+              <button class="btn btn-secondary dropdown-toggle col-12" type="button" id="dropdownMenuButton" data-bs-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                papers
+              </button>
+              <ul class="dropdown-menu col-12" aria-labelledby="dropdownMenuButton">
+                <li ><Link className='dropdown-item text-dark' to="/user/perpapers">personal papers</Link></li>
+                <li><Link className='dropdown-item text-dark' to="/user/compapers">company papers</Link></li>
+              </ul>
+            </div>):''
+            }
+                {
+              serviceDropdown ?( <div className="dropdown">
+              <button class="btn btn-secondary dropdown-toggle col-12" type="button" id="dropdownMenuButton" data-bs-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                services
+              </button>
+              <ul class="dropdown-menu col-12" aria-labelledby="dropdownMenuButton">
+                <li ><Link className='dropdown-item text-dark' to="">request new service</Link></li>
+                <li ><Link className='dropdown-item text-dark' to="">ongoing</Link></li>
+                <li><Link className='dropdown-item text-dark' to="/user/services">all services</Link></li>
+              </ul>
+            </div>):''
+            }
+            </div>
+            </div>
         </div>
-        <div className="col-9">
+        <div className="col-sm-12 col-md-9">
             {/* <Allservices/> */}
             {/* <Perpapers/> */}
             {/* <Compapers/> */}

@@ -2,19 +2,14 @@ import { Link, Outlet } from "react-router-dom";
 import Footer from "../../footer/Footer";
 import Nav from "../../nav/Nav";
 import './main.css'
-import Services from "../services/Services";
-import Users from "../users/users";
-import Blogs from "../blogs/Blogs";
-import Adduser from "../users/adduser";
-import Addblog from "../blogs/Addblog";
 import { useState } from "react";
-
-
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
 
 function Main(){
     const [userDropdown ,setuserDropdown] = useState(true)
-const [serviceDropdown ,setserviceDropdown] = useState(true)
-const [blogDropdown ,setblogDropdown] = useState(true)
+const [serviceDropdown ,setserviceDropdown] = useState(false)
+const [blogDropdown ,setblogDropdown] = useState(false)
 const handleShowDropdown = (drop)=>{
     switch (drop) {
       case 'user':
@@ -63,21 +58,44 @@ const handleShowDropdown = (drop)=>{
             </div>
             <div className="dropside">
                 <div className="links d-flex justify-content-around mt-3">
-                <Link className="header" to={'/users'}>users</Link>
-                <Link className="header" to={'/blogs'}>blogs</Link>
-                <Link className="header" to={'/services'}>services</Link>
+                <Link className="header" to={'/users'} onClick={()=>handleShowDropdown("user")}>users</Link>
+                <Link className="header" to={'/blogs'} onClick={()=>handleShowDropdown("blog")}>blogs</Link>
+                <Link className="header" to={'/services'} onClick={()=>handleShowDropdown("service")}>services</Link>
                 <Link className="header">analytics</Link>
                 <Link className="header">settings</Link>
                 </div>
-                <div className="mt-2">
+                <div className="mt-4 row">
                 {
               userDropdown ?( <div className="dropdown">
-              <button className="btn btn-secondary dropdown-toggle col-12" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle col-12" type="button" id="dropdownMenuButton" data-bs-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
                 users
               </button>
+              <ul class="dropdown-menu col-12" aria-labelledby="dropdownMenuButton">
+                <li ><Link className='dropdown-item text-dark' to="/users">all users</Link></li>
+                <li><Link className='dropdown-item text-dark' to="/adduser">add user</Link></li>
+              </ul>
+            </div>):''
+            }
+                {
+              serviceDropdown ?( <div className="dropdown">
+              <button className="btn btn-secondary dropdown-toggle col-12" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                services
+              </button>
               <ul className='dropdown-menu col-12'>
-                <li ><Link className='dropdown-item text-dark' to="">all users</Link></li>
-                <li><Link className='dropdown-item text-dark' to="">add user</Link></li>
+                <li ><Link className='dropdown-item text-dark' to="/services">all services</Link></li>
+                <li ><Link className='dropdown-item text-dark' to="">unread</Link></li>
+                <li ><Link className='dropdown-item text-dark' to="">ongoing</Link></li>
+              </ul>
+            </div>):''
+            }
+                {
+              blogDropdown ?( <div className="dropdown">
+              <button className="btn btn-secondary dropdown-toggle col-12" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                blogs
+              </button>
+              <ul className='dropdown-menu col-12'>
+                <li ><Link className='dropdown-item text-dark' to="/blogs">all blogs</Link></li>
+                <li><Link className='dropdown-item text-dark' to="/addblog">add blog</Link></li>
               </ul>
             </div>):''
             }

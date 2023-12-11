@@ -8,13 +8,13 @@ function Blogs(){
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css"></link>
             <div className="row p-0 m-0 p-4">
                 <h3 className="col-6 m-0">All blogs</h3>
-                <div className="col-6 d-flex justify-content-between p-0 m-0">
+                <div className="col-sm-12 col-md-6 d-flex justify-content-between p-0 m-0">
                     <input placeholder="&#xf0dc; Sort by" className='col-4' style={{"font-family":"FontAwesome"}}></input>
                     <input placeholder="&#xf002; Search list.." className='col-7' style={{"font-family":"FontAwesome"}}></input>
                 </div>
             </div>
             <hr/>
-            <div className='p-5 row g-2 w-100 blogparent'>
+            <div className=' p-3 row g-2 w-100 blogparent p-md-5'>
                 <div className='col blog'>
                     <img src={img} className='d-block mx-auto'></img>
                     <h5>Lorem ipsum dolor sit amet</h5>

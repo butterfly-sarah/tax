@@ -19,11 +19,11 @@ function Adduser(){
         <p>username</p>
         <input type='text' className='w-100' placeholder='type unique username'></input>
         </div>
-        <div className='col'>
+        <div className='col-sm-12 col-md-6'>
         <p >password</p>
         <input type='password'  placeholder='******************'></input>
         </div>
-        <div className='col'>
+        <div className='col-sm-12 col-md-6'>
         <p >repeat password</p>
         <input type='password'  placeholder='******************'></input>
         </div>

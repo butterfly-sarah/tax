@@ -59,3 +59,8 @@
     color: white;
     width: fit-content;
 }
+@media(max-width:550px){
+    .screen{
+        display: none;
+    }
+}

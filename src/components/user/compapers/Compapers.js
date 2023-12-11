@@ -1,105 +1,80 @@
 
 import 'font-awesome/css/font-awesome.min.css';
+import React from 'react';
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 function Compapers(){
     return(
         <div className="services">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css"></link>
             <div className="row p-0 m-0 p-4">
                 <h3 className="col-6 m-0">company papers</h3>
-                <div className="col-6 d-flex justify-content-between p-0 m-0">
+                <div className="col-sm-12 col-md-6 d-flex justify-content-between p-0 m-0">
                     <input placeholder="&#xf0dc; Sort by" className='col-4' style={{"font-family":"FontAwesome"}}></input>
                     <input placeholder="&#xf002; Search list.." className='col-7' style={{"font-family":"FontAwesome"}}></input>
                 </div>
             </div>
             <div className=''>
-                <table border="1" frame="void" rules="rows">
-                    <tr className='thead'>
-                        <th>#</th>
-                        <th>document</th>
-                        <th>status</th>
-                        <th>upload date</th>
-                        <th>last modified</th>
-                        <th>Actions</th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>VAT</td>
-                        <td className='green'>valid</td>
-                        <td>12-12-2024</td>
-                        <td>12-12-2024</td>
-                        <td>view</td>
-                        <td>edit</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>withhold tax</td>
-                        <td className='red'>not valid</td>
-                        <td>12-12-2024</td>
-                        <td>12-12-2024</td>
-                        <td>view</td>
-                        <td>edit</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>payroll tax</td>
-                        <td className='red'>not valid</td>
-                        <td>12-12-2024</td>
-                        <td>12-12-2024</td>
-                        <td>upload</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>annual income</td>
-                        <td className='green'>valid</td>
-                        <td>12-12-2024</td>
-                        <td>12-12-2024</td>
-                        <td>view</td>
-                        <td>edit</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>annual balance</td>
-                        <td className='green'>valid</td>
-                        <td>12-12-2024</td>
-                        <td>12-12-2024</td>
-                        <td>view</td>
-                        <td>edit</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
+                <Table border="1" frame="void" rules="rows">
+                    <Thead>
+                    <Tr className='thead'>
+                        <Th>#</Th>
+                        <Th>document</Th>
+                        <Th>status</Th>
+                        <Th>upload date</Th>
+                        <Th>last modified</Th>
+                        <Th>Actions</Th>
+                        <Th></Th>
+                    </Tr>
+                    </Thead>
+                    <Tbody>
+                    <Tr>
+                        <Td>03</Td>
+                        <Td>VAT</Td>
+                        <Td className='green'>valid</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>view</Td>
+                        <Td>edit</Td>
+                    </Tr>
+                    <Tr>
+                        <Td>03</Td>
+                        <Td>withhold tax</Td>
+                        <Td className='red'>not valid</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>view</Td>
+                        <Td>edit</Td>
+                    </Tr>
+                    <Tr>
+                        <Td>03</Td>
+                        <Td>payroll tax</Td>
+                        <Td className='red'>not valid</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>upload</Td>
+                        <Td></Td>
+                    </Tr>
+                    <Tr>
+                        <Td>03</Td>
+                        <Td>annual income</Td>
+                        <Td className='green'>valid</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>view</Td>
+                        <Td>edit</Td>
+                    </Tr>
+                    <Tr>
+                        <Td>03</Td>
+                        <Td>annual balance</Td>
+                        <Td className='green'>valid</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>12-12-2024</Td>
+                        <Td>view</Td>
+                        <Td>edit</Td>
+                    </Tr>
+                    </Tbody>
+                </Table>
             </div>
         </div>
     )
