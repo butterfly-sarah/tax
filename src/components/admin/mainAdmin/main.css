@@ -10,7 +10,7 @@
 }
 .main .side{
     background: #0062FF;
-    width: 70%;
+    width: 90%;
     border-radius: 0 0 10px 10px;
     margin-bottom: 15px;
 }
@@ -47,6 +47,23 @@
 .main .side h3{
     font-family: 'Philosopher', sans-serif;;
 }
+.main .dropside{
+    display: none;
+}
 @media(max-width:550px){
-    
+    .main{
+        min-height: 61vh;
+    }
+    .main .side{
+        display: none;
+    }
+    .main .dropside{
+        display: block;
+    }
+    .main .dropside .links a{
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+
+    }
 }

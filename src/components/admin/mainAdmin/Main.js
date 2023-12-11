@@ -7,8 +7,35 @@ import Users from "../users/users";
 import Blogs from "../blogs/Blogs";
 import Adduser from "../users/adduser";
 import Addblog from "../blogs/Addblog";
+import { useState } from "react";
+
+
 
 function Main(){
+    const [userDropdown ,setuserDropdown] = useState(true)
+const [serviceDropdown ,setserviceDropdown] = useState(true)
+const [blogDropdown ,setblogDropdown] = useState(true)
+const handleShowDropdown = (drop)=>{
+    switch (drop) {
+      case 'user':
+          setuserDropdown(true)
+          setserviceDropdown(false)
+          setblogDropdown(false)
+        break;
+      case 'blog':
+          setuserDropdown(false)
+          setserviceDropdown(false)
+          setblogDropdown(true)
+        break;
+      case 'service':
+          setuserDropdown(false)
+          setserviceDropdown(true)
+          setblogDropdown(false)
+        break;
+        default:
+            break;
+    }
+}
     return(
         <>
         <Nav/>
@@ -33,6 +60,28 @@ function Main(){
             <div className="py-3 logout">
                 <Link className="mx-auto">Logout</Link>
             </div>
+            </div>
+            <div className="dropside">
+                <div className="links d-flex justify-content-around mt-3">
+                <Link className="header" to={'/users'}>users</Link>
+                <Link className="header" to={'/blogs'}>blogs</Link>
+                <Link className="header" to={'/services'}>services</Link>
+                <Link className="header">analytics</Link>
+                <Link className="header">settings</Link>
+                </div>
+                <div className="mt-2">
+                {
+              userDropdown ?( <div className="dropdown">
+              <button className="btn btn-secondary dropdown-toggle col-12" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                users
+              </button>
+              <ul className='dropdown-menu col-12'>
+                <li ><Link className='dropdown-item text-dark' to="">all users</Link></li>
+                <li><Link className='dropdown-item text-dark' to="">add user</Link></li>
+              </ul>
+            </div>):''
+            }
+                </div>
             </div>
         </div>
         <div className="col-sm-12 col-md-9">
