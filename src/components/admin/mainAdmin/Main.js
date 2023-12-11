@@ -35,7 +35,7 @@ function Main(){
             </div>
             </div>
         </div>
-        <div className="col-9">
+        <div className="col-sm-12 col-md-9">
             {/* <Services/> */}
             {/* <Users/> */}
             {/* <Blogs/> */}

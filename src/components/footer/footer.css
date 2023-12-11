@@ -19,3 +19,8 @@
 .footer h1{
     font-family: 'Philosopher', sans-serif;;
 }
+@media(max-width:550px){
+    .footer .items a{
+        font-size: small;
+    }
+}

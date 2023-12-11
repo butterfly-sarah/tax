@@ -8,7 +8,7 @@ function Footer(){
         <div className="text-center footer px-5 py-3">
         <h1 className="text-light p-3">Tax Hub</h1>
         <div className='line'></div>
-        <div className='py-3'>
+        <div className='py-3 items'>
             <Link className='mx-2 navlink' >Home</Link>
             <Link className='mx-2 navlink' >About</Link>
             <Link className='mx-2 navlink' >Services</Link>
