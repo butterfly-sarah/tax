@@ -65,17 +65,17 @@
     background-color: cornflowerblue;
 }
 
-.services {
+.servicess {
     width: 60%;
     margin: auto;
     text-align: center;
 }
 
-.services h2 {
+.servicess h2 {
     font-size: 55px;
 }
 
-.services h5 {
+.servicess h5 {
     color: rgb(146, 146, 146);
 }
 
@@ -200,11 +200,11 @@
         width: 100vh;
     }
 
-    .services h2 {
+    .servicess h2 {
         font-size: 27px;
     }
 
-    .services h5 {
+    .servicess h5 {
         color: rgb(146, 146, 146);
         font-size: 16px;
     }
@@ -260,13 +260,13 @@
 
 
 @media screen and (max-width: 576px) {
-    .services h2 {
+    .servicess h2 {
         width: 300px;
         margin-left: -66px;
         font-size: 45px;
     }
 
-    .services h5 {
+    .servicess h5 {
         color: rgb(146, 146, 146);
         width: 350px;
         margin-left: -96px;

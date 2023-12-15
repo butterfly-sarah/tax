@@ -18,6 +18,8 @@ import Layoutdashboard from "./components/Layout/Layoutdashboard";
 import Homepage from './components/Homepage/Home';
 import Blogss from './components/Blogs/Blog';
 import Servicess from './components/Services/Services';
+import Login from './components/login/login';
+import SignUp from './components/register/page';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
             <Route path="services" element={<Servicess/>}/>
             <Route path="blogs" element={<Blogss/>}/>
             <Route path="contactus" element={<Contactus/>}/>
+            <Route path="login" element={<Login/>}/>
+            <Route path="register" element={<SignUp/>}/>
         </Route>
         <Route path="/dashbodrd" element={<Layoutdashboard/>}></Route>
        <Route path='/user' element={<Mainuser/>}>

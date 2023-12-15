@@ -3,6 +3,7 @@ import Footer from "../../footer/Footer";
 import Nav from "../../nav/Nav";
 import './mainuser.css'
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Mainuser(){
 const [paperDropdown ,setpaperDropdown] = useState(true)
@@ -21,25 +22,26 @@ const handleShowDropdown = (drop)=>{
             break;
     }
 }
+const {t}=useTranslation();
     return(
         <>
         <Nav/>
         <div className="main row p-0 m-0">
         <div className="col-sm-12 col-md-2">
             <div className="mx-auto side">
-            <h3 className="py-5 mb-5 ps-3">Dashboard</h3>
+            <h3 className="py-5 mb-5 ps-3">{t("userdashBoardMainTitle")}</h3>
             <div className="py-3 ps-3 dashitems">
-                <Link className="header" to={'/user/perpapers'}>papers</Link>
-                <Link to={'/user/perpapers'}>personal papers</Link>
-                <Link to={'/user/compapers'}>company papers</Link>
-                <Link className="header" to={'/user/services'}>services</Link>
-                <Link>request new service</Link>
-                <Link>ongoing</Link>
-                <Link to={'/user/services'}>all services</Link>
-                <Link className="header">settings</Link>
+                <Link className="header" to={'/user/perpapers'}>{t("userdashBoardpapers")}</Link>
+                <Link to={'/user/perpapers'}>{t("userdashBoardPersonalPapers")}</Link>
+                <Link to={'/user/compapers'}>{t("userdashBoardCompanyPapers")}</Link>
+                <Link className="header" to={'/user/services'}>{t("userdashBoardServices")}</Link>
+                <Link>{t("userdashBoardRequestNewService")}</Link>
+                <Link>{t("userdashBoardOngoingServicesUser")}</Link>
+                <Link to={'/user/services'}>{t("userdashBoardAllServicesUser")}</Link>
+                <Link className="header">{t("userdashBoardSettings")}</Link>
             </div>
             <div className="py-3 logout">
-                <Link className="mx-auto">Logout</Link>
+                <Link className="mx-auto">{t("userdashBoardLogout")}</Link>
             </div>
             </div>
             <div className="dropside">

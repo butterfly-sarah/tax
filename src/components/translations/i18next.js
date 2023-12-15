@@ -1,9 +1,9 @@
-import  i18n  from "i18next";
+import  i18next  from "i18next";
 import { initReactI18next } from "react-i18next";
 import admin_addnewblog_ar from './admin_addnewblog_ar.json'
 import admin_addnewblog_en from './admin_addnewblog_en.json'
 
-const resources={
+const languageResources={
     en:{
         translation:admin_addnewblog_en
     },
@@ -11,13 +11,9 @@ const resources={
         translation:admin_addnewblog_ar
     }
 }
-i18n.use(initReactI18next)
+i18next.use(initReactI18next)
 .init({
-    resources,
+    resources:languageResources,
     lng:"en",
-    keySeparator:false,
-    interpolation:{
-        escapeValue:false
-    }
 });
-export default i18n;
+export default i18next;

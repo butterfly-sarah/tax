@@ -12,7 +12,7 @@ function Servicess() {
 
   return (
     <>
-      <div data-aos="fade-up"  className="p-5 text-center services">
+      <div data-aos="fade-up"  className="p-5 text-center servicess">
         <h2 className="mb-3">Our Services</h2>
         <h5 className="mb-3">
           We provide you with a wide range of service in the fields of audit,

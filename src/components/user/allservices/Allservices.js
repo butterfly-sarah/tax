@@ -2,12 +2,14 @@ import React from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import 'font-awesome/css/font-awesome.min.css';
+import { useTranslation } from 'react-i18next';
 function Allservices(){
+    const {t}=useTranslation()
     return(
         <div className="services">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css"></link>
             <div className="row p-0 m-0 p-4">
-                <h3 className="col-6 m-0">All services</h3>
+                <h3 className="col-6 m-0">{t("userdashBoardAllservicesMainTitle")}</h3>
                 <div className="col-sm-12 col-md-6 d-flex justify-content-between p-0 m-0">
                     <input placeholder="&#xf0dc; Sort by" className='col-4' style={{"font-family":"FontAwesome"}}></input>
                     <input placeholder="&#xf002; Search list.." className='col-7' style={{"font-family":"FontAwesome"}}></input>
@@ -18,45 +20,45 @@ function Allservices(){
                     <Thead>
                     <Tr className='thead'>
                         <Th>#</Th>
-                        <Th>service</Th>
-                        <Th>Serial-code</Th>
-                        <Th>last update</Th>
-                        <Th>date</Th>
-                        <Th>Actions</Th>
+                        <Th>{t("userdashBoardAllServicesService")}</Th>
+                        <Th>{t("userdashBoardAllServicesSerialCode")}</Th>
+                        <Th>{t("userdashBoardAllServicesLastUpdate")}</Th>
+                        <Th>{t("userdashBoardAllServicesDate")}</Th>
+                        <Th>{t("userdashBoardAllServicesAction")}</Th>
                     </Tr>
                     </Thead>
                     <Tbody>
                     <Tr>
                         <Td>03</Td>
-                        <Td>lorem ipsum</Td>
+                        <Td>{t("userdashBoardAllservicesServiceName")}</Td>
                         <Td>#123-456ABC</Td>
                         <Td>12-12-2024</Td>
                         <Td>12-12-2024</Td>
-                        <Td className='green'>Completed</Td>
+                        <Td className='green'>{t("userdashBoardAllservicesCompleted")}</Td>
                     </Tr>
                     <Tr>
                         <Td>03</Td>
-                        <Td>lorem ipsum</Td>
+                        <Td>{t("userdashBoardAllservicesServiceName")}</Td>
                         <Td>#123-456ABC</Td>
                         <Td>12-12-2024</Td>
                         <Td>12-12-2024</Td>
-                        <Td>details</Td>
+                        <Td>{t("userdashBoardAllserviceSdetails")}</Td>
                     </Tr>
                     <Tr>
                         <Td>03</Td>
-                        <Td>lorem ipsum</Td>
+                        <Td>{t("userdashBoardAllservicesServiceName")}</Td>
                         <Td>#123-456ABC</Td>
                         <Td>12-12-2024</Td>
                         <Td>12-12-2024</Td>
-                        <Td className='green'>Completed</Td>
+                        <Td className='green'>{t("userdashBoardAllservicesCompleted")}</Td>
                     </Tr>
                     <Tr>
                         <Td>03</Td>
-                        <Td>lorem ipsum</Td>
+                        <Td>{t("userdashBoardAllservicesServiceName")}</Td>
                         <Td>#123-456ABC</Td>
                         <Td>12-12-2024</Td>
                         <Td>12-12-2024</Td>
-                        <Td>details</Td>
+                        <Td>{t("userdashBoardAllserviceSdetails")}</Td>
                     </Tr>
                     </Tbody>
                 </Table>

@@ -1,14 +1,16 @@
 
 import 'font-awesome/css/font-awesome.min.css';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 function Compapers(){
+    const {t}=useTranslation()
     return(
         <div className="services">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css"></link>
             <div className="row p-0 m-0 p-4">
-                <h3 className="col-6 m-0">company papers</h3>
+                <h3 className="col-6 m-0">{t("userdashboardCompanyPapersMainTitle")}</h3>
                 <div className="col-sm-12 col-md-6 d-flex justify-content-between p-0 m-0">
                     <input placeholder="&#xf0dc; Sort by" className='col-4' style={{"font-family":"FontAwesome"}}></input>
                     <input placeholder="&#xf002; Search list.." className='col-7' style={{"font-family":"FontAwesome"}}></input>
@@ -19,11 +21,11 @@ function Compapers(){
                     <Thead>
                     <Tr className='thead'>
                         <Th>#</Th>
-                        <Th>document</Th>
-                        <Th>status</Th>
-                        <Th>upload date</Th>
-                        <Th>last modified</Th>
-                        <Th>Actions</Th>
+                        <Th>{t("userdashboardCompanyPapersDocument")}</Th>
+                        <Th>{t("userdashboardCompanyPapersStatus")}</Th>
+                        <Th>{t("userdashboardCompanyPapersUploadDate")}</Th>
+                        <Th>{t("userdashboardCompanyPapersLastModified")}</Th>
+                        <Th>{t("userdashboardCompanyPapersActions")}</Th>
                         <Th></Th>
                     </Tr>
                     </Thead>
@@ -31,25 +33,25 @@ function Compapers(){
                     <Tr>
                         <Td>03</Td>
                         <Td>VAT</Td>
-                        <Td className='green'>valid</Td>
+                        <Td className='green'>{t("userdashboardCompanyPapersValid")}</Td>
                         <Td>12-12-2024</Td>
                         <Td>12-12-2024</Td>
                         <Td>view</Td>
-                        <Td>edit</Td>
+                        <Td>{t("admindashboardEditUser")}</Td>
                     </Tr>
                     <Tr>
                         <Td>03</Td>
-                        <Td>withhold tax</Td>
-                        <Td className='red'>not valid</Td>
+                        <Td>{t("userdashboardCompanyPapersWithholdTax")}</Td>
+                        <Td className='red'>{t("userdashboardCompanyPapersNotValid")}</Td>
                         <Td>12-12-2024</Td>
                         <Td>12-12-2024</Td>
                         <Td>view</Td>
-                        <Td>edit</Td>
+                        <Td>{t("admindashboardEditUser")}</Td>
                     </Tr>
                     <Tr>
                         <Td>03</Td>
-                        <Td>payroll tax</Td>
-                        <Td className='red'>not valid</Td>
+                        <Td>{t("userdashboardCompanyPapersPayrollTax")}</Td>
+                        <Td className='red'>{t("userdashboardCompanyPapersNotValid")}</Td>
                         <Td>12-12-2024</Td>
                         <Td>12-12-2024</Td>
                         <Td>upload</Td>
@@ -57,21 +59,21 @@ function Compapers(){
                     </Tr>
                     <Tr>
                         <Td>03</Td>
-                        <Td>annual income</Td>
-                        <Td className='green'>valid</Td>
+                        <Td>{t("userdashboardCompanyPapersAnnualIncom")}</Td>
+                        <Td className='green'>{t("userdashboardCompanyPapersValid")}</Td>
                         <Td>12-12-2024</Td>
                         <Td>12-12-2024</Td>
                         <Td>view</Td>
-                        <Td>edit</Td>
+                        <Td>{t("admindashboardEditUser")}</Td>
                     </Tr>
                     <Tr>
                         <Td>03</Td>
-                        <Td>annual balance</Td>
-                        <Td className='green'>valid</Td>
+                        <Td>{t("userdashboardCompanyPapersAnnualPalance")}</Td>
+                        <Td className='green'>{t("userdashboardCompanyPapersValid")}</Td>
                         <Td>12-12-2024</Td>
                         <Td>12-12-2024</Td>
                         <Td>view</Td>
-                        <Td>edit</Td>
+                        <Td>{t("admindashboardEditUser")}</Td>
                     </Tr>
                     </Tbody>
                 </Table>

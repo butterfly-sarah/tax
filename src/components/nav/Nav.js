@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import 'bootstrap/dist/css/bootstrap.css'
 import './nav.css'
 import { Link } from 'react-router-dom';
-function change(option){
-    localStorage.setItem('lang',option.target.value);
-    window.location.reload();
-}
+import { useTranslation } from 'react-i18next';
+
  function Nav(){
+    const {t, i18n}=useTranslation()
+    function change(option){
+    i18n.changeLanguage(option.target.value)
+}
     const lang=localStorage.getItem('lang')||'en';
     return(
     <div className='d-flex justify-content-around p-4 navbar'>
@@ -26,8 +28,8 @@ function change(option){
             </div>
             <div>
             <FontAwesomeIcon icon={faGlobe} className='mx-2'/>
-            <select onChange={change} value={lang}>
-                <option value="en">English</option>
+            <select onChange={change}>
+                <option value="en"> English</option>
                 <option value="ar">العربية</option>
             </select>
             </div>

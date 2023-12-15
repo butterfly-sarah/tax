@@ -5,6 +5,7 @@ import './main.css'
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
+import { useTranslation } from "react-i18next";
 
 function Main(){
     const [userDropdown ,setuserDropdown] = useState(true)
@@ -31,29 +32,30 @@ const handleShowDropdown = (drop)=>{
             break;
     }
 }
+const {t}=useTranslation();
     return(
         <>
         <Nav/>
         <div className="main row p-0 m-0">
         <div className="col-sm-12 col-md-2">
             <div className="mx-auto side">
-            <h3 className="py-5 mb-5 ps-3">Dashboard</h3>
+            <h3 className="py-5 mb-5 ps-3">{t("admindashBoardMainTitle")}</h3>
             <div className="py-3 ps-3 dashitems">
-                <Link className="header" to={'/users'}>users</Link>
-                <Link to={'/users'}>all users</Link>
-                <Link to={'/adduser'}>add new</Link>
-                <Link className="header" to={'/blogs'}>blogs</Link>
-                <Link to={'/blogs'}>all blogs</Link>
-                <Link to={'/addblog'}>add new</Link>
-                <Link className="header" to={'/services'}>services</Link>
-                <Link>unread</Link>
-                <Link>ongoing</Link>
-                <Link to={'/services'}>all services</Link>
-                <Link className="header">analytics</Link>
-                <Link className="header">settings</Link>
+                <Link className="header" to={'/users'}>{t("admindashBoardUsers")}</Link>
+                <Link to={'/users'}>{t("admindashBoardAllUsers")}</Link>
+                <Link to={'/adduser'}>{t("admindashBoardAddNewUser")}</Link>
+                <Link className="header" to={'/blogs'}>{t("admindashBoardBlogs")}</Link>
+                <Link to={'/blogs'}>{t("admindashBoardAllBlogs")}</Link>
+                <Link to={'/addblog'}>{t("admindashBoardAddNewBlog")}</Link>
+                <Link className="header" to={'/services'}>{t("admindashBoardServices")}</Link>
+                <Link>{t("admindashBoardUnread")}</Link>
+                <Link>{t("admindashBoardOngoing")}</Link>
+                <Link to={'/services'}>{t("admindashBoardAllServices")}</Link>
+                <Link className="header">{t("admindashBoardAnalytics")}</Link>
+                <Link className="header">{t("admindashBoardSettings")}</Link>
             </div>
             <div className="py-3 logout">
-                <Link className="mx-auto">Logout</Link>
+                <Link className="mx-auto">{t("admindashBoardLogout")}</Link>
             </div>
             </div>
             <div className="dropside">
