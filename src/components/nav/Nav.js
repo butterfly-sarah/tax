@@ -12,29 +12,47 @@ import { useTranslation } from 'react-i18next';
 }
     const lang=localStorage.getItem('lang')||'en';
     return(
-    <div className='d-flex justify-content-around p-4 navbar'>
-        <h1>Tax Hub</h1>
-        <div className='items'>
-            <Link className='mx-2 navlink' >Home</Link>
-            <Link className='mx-2 navlink' >About</Link>
-            <Link className='mx-2 navlink' >Services</Link>
-            <Link className='mx-2 navlink' >Blogs</Link>
-            <Link className='mx-2 navlink' >Contact Us</Link>
-        </div>
-        <div className='d-flex'>
-            <div className='mx-4'>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+            <div class="container-fluid " style={{background:"none"}}>
+  <Link class="navbar-brand" href="#"><h1>Tax Hub</h1></Link>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <Link class="nav-link" to="#">Home <span class="sr-only">(current)</span></Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="#">About</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="#">Services</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="#">Blogs</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="#">Contact Us</Link>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0 ms-auto">
+    <span className='mx-4'>
             <FontAwesomeIcon icon={faUser} className='mx-2'/>
             <FontAwesomeIcon icon={faBars} />
-            </div>
-            <div>
-            <FontAwesomeIcon icon={faGlobe} className='mx-2'/>
-            <select onChange={change}>
+        </span>
+        <FontAwesomeIcon icon={faGlobe} className='mr-sm-2'/>
+            <select onChange={change} className='my-2 my-sm-0'>
                 <option value="en"> English</option>
                 <option value="ar">العربية</option>
             </select>
-            </div>
-        </div>
-        
-    </div>)
+    </form>
+  </div>
+  </div>
+
+</nav>
+)
 }
 export default Nav;
