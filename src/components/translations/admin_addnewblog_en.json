@@ -1,0 +1,13 @@
+{
+    "addNewblogMainTitle": "add new blog",
+    "labelTitle": "title",
+    "titlePlaceHolderValue":"your blog title",
+    "labelTags": "tags",
+    "tagsPlaceHolderValue":"enter tags",
+    "labelUploadPhoto": "upload photo",
+    "labelCategories": "categories",
+    "blogCategoriesPlaceHolderValue":"your blog categories",
+    "labelWriteDownYourBlog": "write down your blog",
+    "blogBodyPlaceHolderValue":"your blog",
+    "publish":"publish"
+}

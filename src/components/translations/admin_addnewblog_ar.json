@@ -1,0 +1,13 @@
+{
+    "admindashBoardAddNewblogMainTitle": "إضافة مدونة جديدة",
+    "admindashBoardLabelTitle": "العنوان",
+    "admindashBoardTitlePlaceHolderValue":"عنوان مدونتك",
+    "admindashBoardLabelTags": "العلامات",
+    "admindashBoardTagsPlaceHolderValue":"أدخل العلامات",
+    "admindashBoardLabelUploadPhoto": "حمل الصورة",
+    "admindashBoardLabelCategories": "الفئات",
+    "admindashBoardBlogCategoriesPlaceHolderValue":"فئة مدونتك",
+    "admindashBoardLabelWriteDownYourBlog": "اكتب مدونتك",
+    "admindashBoardBlogBodyPlaceHolderValue":"مدونتك",
+    "admindashBoardPublish":"نشر"
+}

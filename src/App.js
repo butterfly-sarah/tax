@@ -11,6 +11,14 @@ import Services from './components/admin/services/Services';
 import Users from './components/admin/users/users';
 import Adduser from './components/admin/users/adduser';
 
+import Layout from "./components/Layout/Layout";
+import Aboutpage from "./components/About/About";
+import Contactus from "./components/Contactuspage/Contact";
+import Layoutdashboard from "./components/Layout/Layoutdashboard";
+import Homepage from './components/Homepage/Home';
+import Blogss from './components/Blogs/Blog';
+import Servicess from './components/Services/Services';
+
 function App() {
   return (
     <>
@@ -24,6 +32,14 @@ function App() {
         <Route path='/users' element={<Users/>}/>
         <Route path='/adduser' element={<Adduser/>}/>
         </Route>
+        <Route path="/home" element={<Layout/>}>
+            <Route index element={<Homepage/>}/>
+            <Route path="about" element={<Aboutpage/>}/>
+            <Route path="services" element={<Servicess/>}/>
+            <Route path="blogs" element={<Blogss/>}/>
+            <Route path="contactus" element={<Contactus/>}/>
+        </Route>
+        <Route path="/dashbodrd" element={<Layoutdashboard/>}></Route>
        <Route path='/user' element={<Mainuser/>}>
         <Route path='/user/services' element={<Allservices/>}/>
         <Route path='/user/perpapers' element={<Perpapers/>}/>
