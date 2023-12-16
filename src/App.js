@@ -20,6 +20,8 @@ import Blogss from './components/Blogs/Blog';
 import Servicess from './components/Services/Services';
 import Login from './components/login/login';
 import SignUp from './components/register/page';
+import Profile from './components/profile/profile';
+import Chat from './components/chat/chat';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path='/services' element={<Services/>}/>
         <Route path='/users' element={<Users/>}/>
         <Route path='/adduser' element={<Adduser/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/chat' element={<Chat/>}/>
         </Route>
         <Route path="/home" element={<Layout/>}>
             <Route index element={<Homepage/>}/>

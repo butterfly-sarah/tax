@@ -40,8 +40,16 @@ import { useTranslation } from 'react-i18next';
     </ul>
     <form class="form-inline my-2 my-lg-0 ms-auto">
     <span className='mx-4'>
-            <FontAwesomeIcon icon={faUser} className='mx-2'/>
-            <FontAwesomeIcon icon={faBars} />
+            <Link to={"/profile"}><FontAwesomeIcon icon={faUser} className='mx-2'/></Link>
+            
+            <div class="dropdown-center d-inline">
+  <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <FontAwesomeIcon icon={faBars} />
+  </button>
+  <ul class="dropdown-menu">
+    <li><Link class="dropdown-item" to="/chat">chat</Link></li>
+  </ul>
+</div>
         </span>
         <FontAwesomeIcon icon={faGlobe} className='mr-sm-2'/>
             <select onChange={change} className='my-2 my-sm-0'>
