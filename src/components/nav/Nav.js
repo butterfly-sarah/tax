@@ -22,19 +22,19 @@ import { useTranslation } from 'react-i18next';
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <Link class="nav-link" to="#">Home <span class="sr-only">(current)</span></Link>
+        <Link class="nav-link" to="/home">Home <span class="sr-only">(current)</span></Link>
       </li>
       <li class="nav-item">
-        <Link class="nav-link" to="#">About</Link>
+        <Link class="nav-link" to="/home/about">About</Link>
       </li>
       <li class="nav-item">
-        <Link class="nav-link" to="#">Services</Link>
+        <Link class="nav-link" to="/home/services">Services</Link>
       </li>
       <li class="nav-item">
-        <Link class="nav-link" to="#">Blogs</Link>
+        <Link class="nav-link" to="/home/blogs">Blogs</Link>
       </li>
       <li class="nav-item">
-        <Link class="nav-link" to="#">Contact Us</Link>
+        <Link class="nav-link" to="/home/contactus">Contact Us</Link>
       </li>
       
     </ul>
@@ -48,6 +48,8 @@ import { useTranslation } from 'react-i18next';
   </button>
   <ul class="dropdown-menu">
     <li><Link class="dropdown-item" to="/chat">chat</Link></li>
+    <li><Link class="dropdown-item" to="/home/login">login</Link></li>
+    <li><Link class="dropdown-item" to="/home/register">register</Link></li>
   </ul>
 </div>
         </span>

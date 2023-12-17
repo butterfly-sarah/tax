@@ -1,9 +1,12 @@
 
+import { faSort } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'font-awesome/css/font-awesome.min.css';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+
 function Compapers(){
     const {t}=useTranslation()
     return(
@@ -12,7 +15,13 @@ function Compapers(){
             <div className="row p-0 m-0 p-4">
                 <h3 className="col-6 m-0">{t("userdashboardCompanyPapersMainTitle")}</h3>
                 <div className="col-sm-12 col-md-6 d-flex justify-content-between p-0 m-0">
-                    <input placeholder="&#xf0dc; Sort by" className='col-4' style={{"font-family":"FontAwesome"}}></input>
+                <button className='btn col-4 input' style={{"font-family":"FontAwesome"}} type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <FontAwesomeIcon icon={faSort} className='mx-2' />
+                sort by
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" >id</button></li>
+                </ul>
                     <input placeholder="&#xf002; Search list.." className='col-7' style={{"font-family":"FontAwesome"}}></input>
                 </div>
             </div>
